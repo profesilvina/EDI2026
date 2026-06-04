@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI Matemática - Clase 10 - ISFDyT 24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fbfbfa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #37352f;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        .content-card {
+            background-color: white;
+            border: 1px solid #e9e9e7;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .criteria-card {
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9fafb;
+        }
+        .scale-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fff7ed;
+            border-left: 6px solid #f97316;
+            padding: 1.25rem;
+            border-radius: 0 10px 10px 0;
+        }
+        .forum-box {
+            background-color: #eff6ff;
+            border-left: 6px solid #3b82f6;
+            padding: 1.25rem;
+            border-radius: 0 10px 10px 0;
+        }
+        .block-title {
+            display: inline-block;
+            background: #ecfdf5;
+            color: #047857;
+            font-weight: 800;
+            border-radius: 999px;
+            padding: 0.35rem 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .infografia {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        details summary {
+            cursor: pointer;
+            list-style: none;
+        }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::after {
+            content: "+";
+            float: right;
+            font-size: 1.5rem;
+            line-height: 1;
+            color: #047857;
+        }
+        details[open] summary::after { content: "-"; }
+    </style>
+</head>
+<body class="p-4 md:p-16">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="text-emerald-600 hover:underline mb-8 inline-block">← Volver al inicio</a>
+        
+        <img src="bannerEDI.png" alt="Banner" class="banner">
+
+        <div class="content-card">
+            <div class="text-sm text-gray-400 uppercase tracking-wider mb-2">Clase 10 • 4 de junio de 2026</div>
+            <h1 class="text-3xl font-bold text-emerald-700 mb-6 border-b pb-4">El Mundial y la Matemática: entrega del documento de trabajo</h1>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                    En la clase de hoy vamos a organizar la entrega del documento grupal de la actividad <strong>"El Mundial y la Matemática"</strong>. El objetivo es dejar compartida la propuesta completa: fundamentación, plan analógico y actividad digital en GeoGebra.
+                </p>
+                <div class="warning-box">
+                    <h2 class="text-xl font-bold text-orange-800 mb-2">Recordatorio importante</h2>
+                    <p class="text-lg"><strong>Quienes todavía no entregaron la autoevaluación deben hacerlo a la brevedad.</strong></p>
+                    <p class="mt-2">Esta entrega forma parte del cierre del recorrido sobre el Proyecto de Filiación.</p>
+                </div>
+
+
+                <section class="criteria-card">
+                    <h2 class="text-2xl font-bold text-emerald-800 mb-4">Comenzaremos recuperando ideas de Rebeca Anijovich</h2>
+                    <p class="mb-4">Antes de avanzar con la entrega del documento, retomaremos algunos aportes de la conferencia sobre enseñar y evaluar a través de proyectos.</p>
+                    <img src="Anijovich.png" alt="Infografía sobre Rebeca Anijovich y el Aprendizaje Basado en Proyectos" class="infografia">
+                    <div class="mt-4 p-5 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+                        <p class="text-lg font-semibold text-blue-900">Miren con atención la infografía hecha con NotebookLM y contrasten la imagen con los conceptos de Rebeca.</p>
+                        <p class="mt-3">¿Acuerdan con todo lo que aparece en la infografía o hay algo que les parece que no corresponde? Sabemos que la IA a veces alucina, o que no siempre representa bien la información dada. ¿Qué ven en este caso?</p>
+                        <p class="mt-3 font-bold text-blue-900">Iniciamos el debate.</p>
+                    </div>
+
+                    <details class="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                        <summary class="text-xl font-bold text-emerald-800 pr-8">Ver resumen del video</summary>
+                        <div class="mt-4 space-y-4 text-gray-700">
+                            <p>El video de Rebeca Anijovich ofrece una mirada profunda y práctica sobre cómo entender e implementar el Aprendizaje Basado en Proyectos (ABP), destacando que no se trata solo de una metodología, sino de un enfoque que cambia los roles tradicionales en el aula.</p>
+
+                            <div>
+                                <h3 class="font-bold text-emerald-800">1. Fundamentación: el estudiante como protagonista</h3>
+                                <p>Anijovich retoma las ideas de Philippe Perrenoud para aclarar que un proyecto no consiste en hacer "ejercicios escolares rutinarios", sino en enfrentar verdaderos problemas que movilizan competencias. Apoyándose en Jerome Bruner, subraya la importancia de desarrollar la agencia y la autonomía. En el ABP, el estudiante es protagonista de su aprendizaje y evaluación, capaz de colaborar y aplicar soluciones innovadoras en el mundo real.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-emerald-800">2. ¿Cómo nace un proyecto?</h3>
+                                <p>El punto de partida puede surgir de los intereses y preguntas de los estudiantes, de un acontecimiento social o de una pregunta provocadora introducida por el docente y la institución.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-emerald-800">3. Principios para diseñar e implementar proyectos</h3>
+                                <ul class="list-disc pl-6 space-y-2 mt-2">
+                                    <li><strong>Referencia curricular:</strong> el docente debe articular el proyecto con los contenidos del Diseño Curricular.</li>
+                                    <li><strong>Conocer a los estudiantes:</strong> es importante saber qué temas, redes, series o preocupaciones forman parte de su mundo.</li>
+                                    <li><strong>El desafío o pregunta central:</strong> no debe responderse fácilmente buscando en internet; debe provocar pensamiento, discusión y toma de decisiones.</li>
+                                    <li><strong>Doble planificación:</strong> conviven la planificación docente y la planificación de los estudiantes.</li>
+                                    <li><strong>Comunicación hacia el exterior:</strong> definir a quién se comunicarán los logros tiene un fuerte impacto motivacional.</li>
+                                    <li><strong>Evaluación de dos dimensiones:</strong> se evalúa la pertinencia del proyecto y los aprendizajes construidos durante el proceso.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-emerald-800">4. Evaluación formativa y metacognición</h3>
+                                <p>La evaluación no puede quedar solo para el final. Es necesario realizar paradas durante el proceso para ofrecer retroalimentación con rúbricas, listas de cotejo o protocolos. Anijovich destaca la escalera de la metacognición para pensar qué se necesita al iniciar, cómo se avanza y qué se aprendió al finalizar.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-emerald-800">5. Desafíos comunes y orientaciones</h3>
+                                <ul class="list-disc pl-6 space-y-2 mt-2">
+                                    <li><strong>Rigor académico:</strong> cuidar que el entusiasmo por el producto final no haga perder de vista el contenido disciplinar.</li>
+                                    <li><strong>Autonomía inicial:</strong> si el grupo tiene poca autonomía, ofrecer opciones acotadas para aprender a decidir progresivamente.</li>
+                                    <li><strong>Pérdida de interés:</strong> indagar la causa y buscar estrategias para reponer el sentido del proyecto, por ejemplo contactando a un experto real.</li>
+                                </ul>
+                            </div>
+
+                            <p>A modo de cierre, Anijovich afirma que el corazón del diseño está en construir un buen problema o pregunta inicial. La escuela debe dejar de ser una caja cerrada y buscar mayor permeabilidad con los problemas y personas del mundo exterior.</p>
+                        </div>
+                    </details>
+                </section>
+
+
+                <div class="forum-box">
+                    <h2 class="text-xl font-bold text-blue-800 mb-2">Actividad de la clase</h2>
+                    <p>
+                        Para la clase del día de hoy, <strong>un integrante de cada grupo</strong> deberá compartir en el foro <strong>Actividad: "El Mundial y la Matemática"</strong>, del aula del INFoD, el enlace a su Documento de Google Drive.
+                    </p>
+                    <p class="mt-3 font-semibold text-blue-900">
+                        Recuerden configurar el documento para que pueda ser visualizado por quienes tengan el enlace.
+                    </p>
+                </div>
+
+                <hr class="my-8 border-gray-200">
+
+                <h2 class="text-2xl font-bold text-emerald-800 mt-8 mb-4">Estructura requerida para el documento</h2>
+
+                <section class="criteria-card">
+                    <span class="block-title">Bloque 1</span>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-3">Datos generales y breve fundamentación teórica</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Encabezado:</strong> nombre de los integrantes y curso de la Escuela Secundaria asignado.</li>
+                        <li><strong>Nombre de la actividad.</strong></li>
+                        <li><strong>Contenido curricular:</strong> eje temático y saberes específicos extraídos de forma explícita del Diseño Curricular vigente en la provincia.</li>
+                        <li><strong>Reflexión pedagógica:</strong> breve fundamentación que vincule la propuesta con la conferencia de Rebeca Anijovich.</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-white rounded-lg border border-emerald-100">
+                        <h4 class="font-bold text-emerald-700 mb-2">En la reflexión deben explicar:</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-sm">
+                            <li>Cómo van a evitar plantear <strong>"ejercicios escolares rutinarios"</strong>, citando a Perrenoud, que pueden leer en la bibliografía de la materia.</li>
+                            <li>De qué manera la temática del Mundial se convertirá en un problema o desafío auténtico, donde el alumno de secundaria deba actuar y movilizar saberes de forma activa.</li>
+                            <li>Otro concepto o idea del video de Anijovich que puedan aplicar en su actividad.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="criteria-card">
+                    <span class="block-title">Bloque 2</span>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-3">La propuesta analógica: el "Plan B" en papel y lápiz</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>La consigna de aula:</strong> redacten la actividad tal cual se la entregarán a los alumnos si en la escuela secundaria no hubiese conexión a internet o computadoras.</li>
+                        <li><strong>Materiales físicos:</strong> detallen qué soportes utilizarán, por ejemplo hojas milimetradas, fotos impresas de jugadas o estadios, hilos para registrar trayectorias, reglas o transportadores.</li>
+                        <li><strong>Resolución completa:</strong> desarrollen paso a paso todos los cálculos, estimaciones, fórmulas y representaciones matemáticas esperadas como solución para esta modalidad analógica.</li>
+                    </ul>
+                </section>
+
+                <section class="criteria-card">
+                    <span class="block-title">Bloque 3</span>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-3">La actividad digital en GeoGebra</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>La consigna digital:</strong> redacten la consigna adaptada al software. Indiquen qué acciones nuevas se le piden al estudiante aprovechando la tecnología.</li>
+                        <li><strong>Enlace de acceso:</strong> coloquen el link de la actividad en GeoGebra.</li>
+                        <li><strong>Objetivo final:</strong> recuerden que todas las producciones se integrarán luego en un Libro de GeoGebra del curso.</li>
+                    </ul>
+                </section>
+
+                <div class="scale-box">
+                    <h2 class="text-xl font-bold text-emerald-800 mb-2">Antes de publicar en el foro</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Revisen que el documento tenga los tres bloques completos.</li>
+                        <li>Verifiquen que el enlace de Google Drive tenga permisos de visualización.</li>
+                        <li>Comprueben que el enlace de GeoGebra abra correctamente.</li>
+                        <li>Publiquen el enlace en el foro del INFoD una sola vez por grupo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="text-emerald-600 hover:underline mt-8 inline-block">← Volver al inicio</a>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Prof. Silvina Busto - Clase 10 - 4 de junio de 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
