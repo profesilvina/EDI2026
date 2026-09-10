@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI Matemática - Clase 19 - ISFDyT 24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fbfbfa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #37352f;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        .content-card {
+            background-color: white;
+            border: 1px solid #e9e9e7;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .criteria-card {
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 1.25rem;
+            background-color: #f9fafb;
+        }
+        .scale-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .option-badge {
+            background-color: #065f46;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .cron-badge {
+            background-color: #047857;
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-16">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="text-emerald-600 hover:underline mb-8 inline-block">← Volver al inicio</a>
+        
+        <img src="bannerEDI.png" alt="Banner EDI" class="banner">
+
+        <div class="content-card">
+            <div class="text-sm text-gray-400 uppercase tracking-wider mb-2">Clase 19 • 10 de septiembre de 2026</div>
+            <h1 class="text-3xl font-bold text-emerald-700 mb-6 border-b pb-4">Formulación de la pregunta de investigación y cronograma de trabajo</h1>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                    En esta segunda clase destinada al <strong>Proyecto Individual ABP 2026</strong>, nos enfocamos en construir el núcleo motor de la propuesta: la <strong>pregunta de investigación o pregunta impulsora</strong>, la delimitación del problema auténtico del mundo real, el recorte de los contenidos curriculares y la definición del contexto y destinatarios en la escuela secundaria.
+                </p>
+
+                <!-- Documentos oficiales del proyecto -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="https://docs.google.com/document/d/1nDF_L-U77JokkWeoCmbD4Q98ryX8KUJa6zKB1gE49BM/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📄</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Estructura del proyecto individual</strong>
+                            <span class="text-xs text-emerald-800">Plantilla y guía oficial en Google Drive</span>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1O4jH735FvZkDrUbuOnBF0sJNCG_IcsJFIk4eJBx0eHk/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📋</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Rúbrica de evaluación analítica</strong>
+                            <span class="text-xs text-emerald-800">Criterios e indicadores en Google Drive</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cuadro de la Pregunta Impulsora -->
+                <div class="scale-box">
+                    <h3 class="font-bold text-emerald-900 text-lg mb-2">🎯 El corazón del ABP: la pregunta de investigación</h3>
+                    <p class="text-emerald-950 mb-2">
+                        Una buena pregunta impulsora debe ser <strong>abierta, provocadora y significativa</strong> para los estudiantes de secundaria. No puede responderse con una búsqueda rápida en internet ni con la aplicación mecánica de una fórmula matemática; debe invitar a formular hipótesis, experimentar, modelizar y tomar decisiones.
+                    </p>
+                    <ul class="list-disc list-inside text-sm text-emerald-900 space-y-1 mt-2">
+                        <li><strong>Auténtica:</strong> conectada con situaciones reales, del entorno local, ambiental, científico o tecnológico.</li>
+                        <li><strong>Desafiante:</strong> requiere articular saberes matemáticos para diseñar soluciones tangibles.</li>
+                        <li><strong>Alineada a los ejes 2026:</strong> gamificación/escape room, STEAM, perspectiva de género, robótica, cultura digital o compromiso socioambiental.</li>
+                    </ul>
+                </div>
+
+                <!-- Pautas Tecnológicas Obligatorias y Optativas -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">💻 Requisitos e integración tecnológica (2026)</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="criteria-card border-l-4 border-l-emerald-600">
+                            <span class="option-badge mb-2">Obligatorio</span>
+                            <h4 class="font-bold text-emerald-900">GeoGebra + libro de GeoGebra</h4>
+                            <p class="text-sm text-gray-700 mt-1">
+                                Actividad de modelización geométrica o algebraica con deslizadores dinámicos y la publicación de un <strong>libro interactivo en GeoGebra</strong> que nuclee consignas, applets y recursos.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card border-l-4 border-l-emerald-600">
+                            <span class="option-badge mb-2">Obligatorio</span>
+                            <h4 class="font-bold text-emerald-900">Vibe coding (simulador / mini-app)</h4>
+                            <p class="text-sm text-gray-700 mt-1">
+                                Una aplicación o simulador interactivo web creado por el futuro docente (apoyándose en herramientas de IA y código) para dinamizar la comprensión de variables.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card border-l-4 border-l-emerald-600">
+                            <span class="option-badge mb-2">Obligatorio</span>
+                            <h4 class="font-bold text-emerald-900">Gamificación / ludificación</h4>
+                            <p class="text-sm text-gray-700 mt-1">
+                                Una actividad de carácter lúdico o inmersivo (misiones matemáticas, escape room o dinámicas por etapas) que potencie la motivación intrínseca.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card border-l-4 border-l-blue-600 bg-blue-50/50">
+                            <span class="bg-blue-700 text-white px-2 py-0.5 rounded text-xs font-bold inline-block mb-2">Propuesta optativa</span>
+                            <h4 class="font-bold text-blue-950">Programación con código para alumnos</h4>
+                            <p class="text-sm text-gray-700 mt-1">
+                                A diferencia del ciclo 2025, programar en Scratch o Python <strong>no es obligatorio</strong> para los alumnos de secundaria; queda como una alternativa sugerida si el docente lo considera pertinente.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cronograma Detallado de Actividades -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">📅 Cronograma oficial de clases y entregas (2026)</h3>
+                    <p class="text-sm text-gray-600">
+                        Organización secuencial del desarrollo del proyecto individual hasta la acreditación final de la materia:
+                    </p>
+
+                    <div class="overflow-x-auto rounded-lg border border-gray-200">
+                        <table class="text-sm text-left">
+                            <thead class="bg-emerald-800 text-white text-xs uppercase">
+                                <tr>
+                                    <th class="p-3 w-1/4">Clase / fecha</th>
+                                    <th class="p-3 w-1/4">Fase del proyecto</th>
+                                    <th class="p-3 w-1/2">Objetivo de trabajo y meta parcial</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 18 (03/09)<br>
+                                        <span class="cron-badge">Clase 1 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Lanzamiento y líneas de trabajo</td>
+                                    <td class="p-3 text-gray-600">Presentación de la estructura del proyecto individual ABP y explicación de las líneas de acción y ejes temáticos sugeridos.</td>
+                                </tr>
+                                <tr class="bg-emerald-50/40 hover:bg-emerald-50 font-medium">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 19 (10/09)<br>
+                                        <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">Clase de hoy</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-950">Pregunta de investigación y contexto</td>
+                                    <td class="p-3 text-emerald-950">Formulación de la pregunta de investigación o problema desafiante, selección de destinatarios (año), contexto escolar y delimitación de contenidos curriculares.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 20 (17/09)<br>
+                                        <span class="cron-badge">Clase 3 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Fundamentación, objetivos e inicio de actividades</td>
+                                    <td class="p-3 text-gray-600">Redacción del marco teórico-didáctico (ABP y autores: Anijovich, Furman, Perrenoud, Pochulu), objetivos de aprendizaje y comienzo de la planificación de actividades progresivas.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 21 (24/09)<br>
+                                        <span class="cron-badge">Clase 4 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Taller de Vibe coding</td>
+                                    <td class="p-3 text-gray-600">Desarrollo del simulador o mini-aplicación web interactiva creada mediante <em>Vibe coding</em> con asistencia de IA para la propuesta docente.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 22 (01/10)<br>
+                                        <span class="cron-badge">Clase 5 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">GeoGebra y gamificación</td>
+                                    <td class="p-3 text-gray-600">Diseño de la actividad de modelización dinámica en GeoGebra y diseño de la actividad lúdica o gamificada (misión, escape room). Propuesta optativa de código para alumnos.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 23 (08/10)<br>
+                                        <span class="cron-badge">Clase 6 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Libro de GeoGebra y producto final</td>
+                                    <td class="p-3 text-gray-600">Estructuración y ensamblado del libro interactivo en GeoGebra (consignas, applets y enlaces) y definición del producto final y difusión ante audiencia real.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 24 (15/10)<br>
+                                        <span class="cron-badge">Clase 7 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Plan de evaluación y rúbricas</td>
+                                    <td class="p-3 text-gray-600">Diseño del plan de evaluación formativa y sumativa. Elaboración de instrumentos de seguimiento y diseño de dos rúbricas completas (intermedia y final integradora).</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 25 (22/10)<br>
+                                        <span class="cron-badge">Clase 8 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Anexos: resolución de actividades y uso de IA</td>
+                                    <td class="p-3 text-gray-600">Resolución técnico-matemática completa de todas las actividades propuestas en el proyecto, análisis de errores conceptuales y declaración ética de uso de IA.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 26 (29/10)<br>
+                                        <span class="cron-badge">Clase 9 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Taller de coevaluación entre pares</td>
+                                    <td class="p-3 text-gray-600">Revisión cruzada y retroalimentación formativa de borradores completos entre colegas del profesorado. Ajustes finales.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 27 (05/11)<br>
+                                        <span class="bg-emerald-800 text-white px-2 py-0.5 rounded text-xs font-bold">Entrega final</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-800">Entrega final y socialización</td>
+                                    <td class="p-3 text-gray-700 font-medium">Entrega definitiva del documento en Google Drive y libro de GeoGebra publicado. Presentación y socialización de proyectos.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Tarea para el próximo encuentro -->
+                <div class="scale-box bg-emerald-50 border-emerald-600">
+                    <h4 class="font-bold text-emerald-950 text-base mb-1">📝 Tarea y meta para la próxima clase (17/09):</h4>
+                    <p class="text-sm text-emerald-900">
+                        Completar en su documento de Google Drive: la carátula, la pregunta de investigación, los destinatarios y contexto, y el recorte de contenidos matemáticos a trabajar.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="text-emerald-600 hover:underline mt-8 inline-block">← Volver al inicio</a>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Prof. Silvina Busto - EDI: Matemática y el Trabajo por Proyectos - ISFDyT N° 24</p>
+        </footer>
+    </div>
+</body>
+</html>
