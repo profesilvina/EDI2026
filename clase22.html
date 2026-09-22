@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI Matemática - Clase 22 - ISFDyT 24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fbfbfa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: #37352f;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        .content-card {
+            background-color: white;
+            border: 1px solid #e9e9e7;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .criteria-card {
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 1.25rem;
+            background-color: #f9fafb;
+        }
+        .scale-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .cron-badge {
+            background-color: #047857;
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-16">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="text-emerald-600 hover:underline mb-8 inline-block">← Volver al inicio</a>
+        
+        <img src="bannerEDI.png" alt="Banner EDI" class="banner">
+
+        <div class="content-card">
+            <div class="text-sm text-gray-400 uppercase tracking-wider mb-2">Clase 22 • 1 de octubre de 2026</div>
+            <h1 class="text-3xl font-bold text-emerald-700 mb-6 border-b pb-4">Diseño de actividades y primera producción en GeoGebra</h1>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                    Llegamos a la <strong>quinta clase del proyecto individual ABP (2026)</strong>. Luego de haber explorado en la clase anterior el prototipado con Vibe Coding, en este encuentro nos concentramos en estructurar la <strong>secuencia didáctica de actividades</strong> y avanzar en el desarrollo de la <strong>primera producción dinámica en GeoGebra</strong>, articulando intencionalidad pedagógica, mediación docente y modelización matemática interactiva.
+                </p>
+
+                <!-- Documentos oficiales del proyecto y enlaces GeoGebra -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://docs.google.com/document/d/1nDF_L-U77JokkWeoCmbD4Q98ryX8KUJa6zKB1gE49BM/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📄</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Estructura del proyecto</strong>
+                            <span class="text-xs text-emerald-800">Plantilla oficial en Drive</span>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1O4jH735FvZkDrUbuOnBF0sJNCG_IcsJFIk4eJBx0eHk/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📋</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Rúbrica analítica</strong>
+                            <span class="text-xs text-emerald-800">Criterios de evaluación ABP</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.geogebra.org/" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">🌐</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">GeoGebra Online</strong>
+                            <span class="text-xs text-emerald-800">Plataforma y perfil docente</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.geogebra.org/m/t59xh7fc" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">🧮</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Recursos GeoGebra</strong>
+                            <span class="text-xs text-emerald-800">Guía y materiales de apoyo</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bloque 1: Delimitación de contenidos y saberes previos -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">1. Revisión de la situación problema, contenidos y saberes previos</h3>
+                    <p>
+                        Antes de crear o adaptar cualquier recurso tecnológico, es indispensable consolidar la arquitectura curricular de la propuesta en su documento de trabajo personal de Google Drive:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="criteria-card">
+                            <h4 class="font-bold text-gray-900 text-base mb-2">🎯 Pregunta impulsora y contenidos matemáticos:</h4>
+                            <p class="text-sm text-gray-700 mb-2">
+                                Realizar un breve repaso de la <strong>situación problema auténtica</strong> y verificar que la <strong>pregunta de investigación</strong> continúe orientando todo el recorrido formativo.
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                Escribir de forma explícita el recorte de <strong>contenidos curriculares</strong> de la escuela secundaria que abordará el proyecto, evitando acumulaciones enciclopédicas y priorizando conceptos estructurantes.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card">
+                            <h4 class="font-bold text-gray-900 text-base mb-2">🧠 Saberes previos de los estudiantes:</h4>
+                            <p class="text-sm text-gray-700 mb-2">
+                                Indicar con claridad qué <strong>saberes y nociones previas</strong> necesitan dominar las y los estudiantes de secundaria para poder involucrarse con éxito en las consignas.
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                Esto permite anticipar obstáculos cognitivos y diseñar actividades iniciales de activación o andamiaje oportuno.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="scale-box">
+                        <h4 class="font-bold text-emerald-950 text-base mb-1">📝 Definición de la secuencia de actividades:</h4>
+                        <p class="text-sm text-emerald-900">
+                            Definir las actividades progresivas que integrarán el proyecto y dejarlas plasmadas en su documento de trabajo, asegurando que cada una responda a una fase clara (apertura motivadora, indagación guiada, modelización y síntesis o producto final).
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 2: Exploración y curaduría en GeoGebra -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">2. Exploración y curaduría de recursos en GeoGebra</h3>
+                    <p>
+                        GeoGebra cuenta con una comunidad global de docentes que comparten miles de construcciones y hojas de trabajo interactivas. El trabajo docente situado no requiere inventar todo desde cero, sino ejercer una <strong>curaduría didáctica crítica</strong>:
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>
+                            <strong>Crear o acceder a su perfil en GeoGebra:</strong> Ingresar a <a href="https://www.geogebra.org/" target="_blank" class="text-emerald-700 font-semibold hover:underline">geogebra.org</a> e iniciar sesión con su cuenta (Google / @bue.edu.ar). Esto les permitirá guardar, organizar y publicar sus propias producciones.
+                        </li>
+                        <li>
+                            <strong>Explorar ejemplos de applets y recursos abiertos:</strong> Navegar los materiales creados por otros colegas y analizar qué decisiones didácticas resultan valiosas: ¿Cómo se usan los deslizadores? ¿Qué preguntas orientan la observación? ¿Qué conjeturas promueve el movimiento de la figura?
+                        </li>
+                        <li>
+                            <strong>Selección y adaptación del recurso:</strong> Seleccionar al menos un applet o construcción ya existente que guarde estrecha relación con el contenido de su proyecto, evaluando qué adaptaciones, consignas o textos necesita para responder a su grupo escolar destinatario.
+                        </li>
+                    </ul>
+
+                    <div class="criteria-card border-l-4 border-l-emerald-600 bg-emerald-50/50">
+                        <h4 class="font-bold text-emerald-950 text-base mb-1">🔗 Enlaces orientadores de GeoGebra:</h4>
+                        <div class="flex flex-wrap gap-3 mt-2">
+                            <a href="https://www.geogebra.org/m/t59xh7fc#material/tryczjnv" target="_blank" class="inline-flex items-center gap-1 text-sm font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition-colors">
+                                <span>🔍</span> Ejemplos de actividades y materiales
+                            </a>
+                            <a href="https://www.geogebra.org/m/t59xh7fc" target="_blank" class="inline-flex items-center gap-1 text-sm font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition-colors">
+                                <span>📚</span> Aprende a utilizar Recursos GeoGebra
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 3: Creación de la página dinámica en GeoGebra -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">3. Taller práctico: Creación de la primera página dinámica</h3>
+                    <p>
+                        Una <strong>página dinámica en GeoGebra</strong> (actividad interactiva) no es un applet suelto ni un gráfico aislado: es una unidad didáctica completa que guía el pensamiento del alumno. Cada estudiante creará en su perfil de GeoGebra una página que integre de forma armónica los siguientes tres componentes:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="criteria-card border-t-4 border-t-emerald-600">
+                            <div class="text-3xl mb-2">✍️</div>
+                            <h4 class="font-bold text-gray-900 text-base mb-1">1. Texto explicativo</h4>
+                            <p class="text-sm text-gray-700">
+                                Consignas claras que encuadren la actividad, preguntas disparadoras que inviten a formular conjeturas y orientaciones para guiar la exploración matemática.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card border-t-4 border-t-blue-600">
+                            <div class="text-3xl mb-2">🖼️</div>
+                            <h4 class="font-bold text-gray-900 text-base mb-1">2. Imagen vinculada</h4>
+                            <p class="text-sm text-gray-700">
+                                Una ilustración, esquema o fotografía alusiva a la temática del proyecto o al problema real que se busca resolver, contextualizando el contenido.
+                            </p>
+                        </div>
+
+                        <div class="criteria-card border-t-4 border-t-purple-600">
+                            <div class="text-3xl mb-2">📐</div>
+                            <h4 class="font-bold text-gray-900 text-base mb-1">3. Recurso interactivo</h4>
+                            <p class="text-sm text-gray-700">
+                                El applet de GeoGebra seleccionado o adaptado, con parámetros manipulables (deslizadores, casillas de control, puntos móviles) que permitan "tocar la matemática".
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="scale-box bg-emerald-50 border-emerald-600">
+                        <h4 class="font-bold text-emerald-950 text-base mb-1">💡 Tutorial oficial de soporte:</h4>
+                        <p class="text-sm text-emerald-900 mb-3">
+                            Para ver el procedimiento técnico paso a paso sobre cómo estructurar y publicar una página de actividad dentro de la plataforma:
+                        </p>
+                        <a href="https://www.geogebra.org/m/t59xh7fc" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 transition-colors text-sm shadow-sm">
+                            <span>📖 Ver: Aprende a utilizar Recursos GeoGebra</span> ↗
+                        </a>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 4: Metas de producción para el Documento del Proyecto -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">🛠️ Metas de producción para la Clase 22 en su Documento del Proyecto</h3>
+                    <p>
+                        Durante el taller presencial y en el trabajo autónomo de la semana, cada estudiante completará en su documento personal de Google Drive del Proyecto Individual:
+                    </p>
+
+                    <div class="criteria-card space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">✅</span>
+                            <div>
+                                <strong class="text-gray-900 block">1. Escribir contenidos matemáticos y saberes previos:</strong>
+                                <span class="text-sm text-gray-600">Delimitar con precisión los conceptos curriculares y los conocimientos necesarios de los estudiantes en la sección correspondiente.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">✅</span>
+                            <div>
+                                <strong class="text-gray-900 block">2. Copiar el enlace de la página dinámica de GeoGebra creada:</strong>
+                                <span class="text-sm text-gray-600">Pegar el link público de la actividad (que incluye texto explicativo, imagen y applet) en la sección de actividades de su documento de trabajo.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">✅</span>
+                            <div>
+                                <strong class="text-gray-900 block">3. Intercambio y socialización con el grupo:</strong>
+                                <span class="text-sm text-gray-600">Compartir el enlace con los compañeros de cursada, comentando las posibilidades pedagógicas y las dificultades técnicas encontradas al manipular la herramienta.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 5: Profundización en GeoGebra Clásico -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">🚀 Para seguir aprendiendo: GeoGebra Clásico</h3>
+                    <p class="text-sm text-gray-700">
+                        Si desean profundizar en el diseño avanzado de construcciones geométricas, funciones y parametrización matemática, tienen a disposición el libro interactivo oficial:
+                    </p>
+
+                    <a href="https://www.geogebra.org/m/MqVqGRux" target="_blank" class="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-center justify-between group">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">📐</span>
+                            <div>
+                                <strong class="text-gray-900 group-hover:text-emerald-700 transition-colors block text-base">Aprende GeoGebra Clásico</strong>
+                                <span class="text-xs text-gray-600">Tutoriales interactivos sobre herramientas, comandos y modelización</span>
+                            </div>
+                        </div>
+                        <span class="text-emerald-700 font-bold text-sm">Explorar libro ↗</span>
+                    </a>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Cronograma oficial -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">📅 Cronograma oficial de clases y entregas (2026)</h3>
+                    <p class="text-sm text-gray-600">
+                        Seguimiento del cronograma del proyecto individual hasta la acreditación final:
+                    </p>
+
+                    <div class="overflow-x-auto rounded-lg border border-gray-200">
+                        <table class="text-sm text-left">
+                            <thead class="bg-emerald-800 text-white text-xs uppercase">
+                                <tr>
+                                    <th class="p-3 w-1/4">Clase / fecha</th>
+                                    <th class="p-3 w-1/4">Fase del proyecto</th>
+                                    <th class="p-3 w-1/2">Objetivo de trabajo y meta parcial</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 18 (03/09)<br>
+                                        <span class="cron-badge">Clase 1 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Lanzamiento y líneas de trabajo</td>
+                                    <td class="p-3 text-gray-600">Presentación de la estructura del proyecto individual ABP y explicación de las líneas de acción y ejes temáticos sugeridos.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 19 (10/09)<br>
+                                        <span class="cron-badge">Clase 2 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Pregunta de investigación y contexto</td>
+                                    <td class="p-3 text-gray-600">Formulación de la pregunta de investigación o problema desafiante, selección de destinatarios (año), contexto escolar y delimitación de contenidos curriculares.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 20 (17/09)<br>
+                                        <span class="cron-badge">Clase 3 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Fundamentación, objetivos e inicio de actividades</td>
+                                    <td class="p-3 text-gray-600">Redacción del marco teórico-didáctico (ABP y autores: Anijovich, Furman, Perrenoud, Pochulu), objetivos de aprendizaje y comienzo de la planificación de actividades progresivas.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 21 (24/09)<br>
+                                        <span class="cron-badge">Clase 4 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Taller de Vibe coding</td>
+                                    <td class="p-3 text-gray-600">Desarrollo del simulador o mini-aplicación web interactiva creada mediante <em>Vibe coding</em> con asistencia de IA para la propuesta docente, con enfoque DUA y recursos visuales/SVG.</td>
+                                </tr>
+                                <tr class="bg-emerald-50/60 hover:bg-emerald-50 font-medium">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 22 (01/10)<br>
+                                        <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs font-bold">Clase de hoy</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-950">Diseño de actividades y producción GeoGebra</td>
+                                    <td class="p-3 text-emerald-950">Estructuración de contenidos y saberes previos, diseño de la secuencia didáctica y creación de la primera página dinámica en GeoGebra (texto explicativo, imagen y applet interactivo).</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 23 (08/10)<br>
+                                        <span class="cron-badge">Clase 6 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Libro de GeoGebra y producto final</td>
+                                    <td class="p-3 text-gray-600">Estructuración y ensamblado del libro interactivo en GeoGebra (consignas, applets y enlaces) y definición del producto final y difusión ante audiencia real.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 24 (15/10)<br>
+                                        <span class="cron-badge">Clase 7 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Plan de evaluación y rúbricas</td>
+                                    <td class="p-3 text-gray-600">Diseño del plan de evaluación formativa y sumativa. Elaboración de instrumentos de seguimiento y diseño de dos rúbricas completas (intermedia y final integradora).</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 25 (22/10)<br>
+                                        <span class="cron-badge">Clase 8 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Anexos: resolución de actividades y uso de IA</td>
+                                    <td class="p-3 text-gray-600">Resolución técnico-matemática completa de todas las actividades propuestas en el proyecto, análisis de errores conceptuales y declaración ética de uso de IA.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 26 (29/10)<br>
+                                        <span class="cron-badge">Clase 9 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Taller de coevaluación entre pares</td>
+                                    <td class="p-3 text-gray-600">Revisión cruzada y retroalimentación formativa de borradores completos entre colegas del profesorado. Ajustes finales.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 27 (05/11)<br>
+                                        <span class="bg-emerald-800 text-white px-2 py-0.5 rounded text-xs font-bold">Entrega final</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-800">Entrega final y socialización</td>
+                                    <td class="p-3 text-gray-700 font-medium">Entrega definitiva del documento en Google Drive y libro de GeoGebra publicado. Presentación y socialización de proyectos.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <a href="index.html" class="text-emerald-600 hover:underline mt-8 inline-block">← Volver al inicio</a>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Prof. Silvina Busto - EDI: Matemática y el trabajo por proyectos - ISFDyT N° 24</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI Matemática - Clase 21 - ISFDyT 24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fbfbfa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: #37352f;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        .content-card {
+            background-color: white;
+            border: 1px solid #e9e9e7;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .criteria-card {
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 1.25rem;
+            background-color: #f9fafb;
+        }
+        .scale-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .cron-badge {
+            background-color: #047857;
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .code-pill {
+            background-color: #f3f4f6;
+            color: #1f2937;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+            border: 1px solid #e5e7eb;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-16">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="text-emerald-600 hover:underline mb-8 inline-block">← Volver al inicio</a>
+        
+        <img src="bannerEDI.png" alt="Banner EDI" class="banner">
+
+        <div class="content-card">
+            <div class="text-sm text-gray-400 uppercase tracking-wider mb-2">Clase 21 • 24 de septiembre de 2026</div>
+            <h1 class="text-3xl font-bold text-emerald-700 mb-6 border-b pb-4">Taller de Vibe Coding: Creación del simulador interactivo con IA para el Proyecto Individual</h1>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                    Llegamos a la <strong>cuarta clase del proyecto individual ABP (2026)</strong>. Luego de haber consolidado en los encuentros anteriores la pregunta de investigación, la fundamentación teórica situada y el inicio de la secuencia didáctica, hoy nos sumergimos de lleno en el taller práctico de <strong>Vibe Coding</strong>: el desarrollo de la mini-aplicación o simulador interactivo creado con asistencia de Inteligencia Artificial que forma parte de los requisitos tecnológicos obligatorios de su Trabajo Final.
+                </p>
+
+                <!-- Documentos oficiales del proyecto y recursos -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://docs.google.com/document/d/1nDF_L-U77JokkWeoCmbD4Q98ryX8KUJa6zKB1gE49BM/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📄</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Estructura del proyecto</strong>
+                            <span class="text-xs text-emerald-800">Plantilla y guía oficial en Drive</span>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/document/d/1O4jH735FvZkDrUbuOnBF0sJNCG_IcsJFIk4eJBx0eHk/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📋</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Rúbrica analítica</strong>
+                            <span class="text-xs text-emerald-800">Criterio 1: Tecnología situada</span>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/presentation/d/1zrSPuR19sVWYrMTSqRRCr_rrJ5W0NNINBRJ7pS1FNKU/edit?usp=sharing" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">📊</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Presentación de clase</strong>
+                            <span class="text-xs text-emerald-800">Vibe coding en Google Slides</span>
+                        </div>
+                    </a>
+
+                    <a href="repoapps_mate/index.html" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex items-start gap-3 group">
+                        <span class="text-3xl">🧮</span>
+                        <div>
+                            <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Catálogo REPOMATE</strong>
+                            <span class="text-xs text-emerald-800">Simuladores de inspiración</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bloque de soporte: Presentación de diapositivas embebida -->
+                <section class="space-y-4">
+                    <div class="scale-box bg-emerald-50 border-emerald-600 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-emerald-950 text-base mb-1">📊 Presentación digital de la clase: Vibe coding para educadores</h4>
+                            <p class="text-sm text-emerald-900">
+                                Diapositivas interactivas con los fundamentos metodológicos, el andamiaje pedagógico frente al solucionismo tecnológico, los 5 componentes del prompt y la comparativa de entornos de IA.
+                            </p>
+                        </div>
+                        <a href="https://docs.google.com/presentation/d/1zrSPuR19sVWYrMTSqRRCr_rrJ5W0NNINBRJ7pS1FNKU/edit?usp=sharing" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 transition-colors text-sm shadow-sm whitespace-nowrap">
+                            <span>Abrir en Google Slides</span> ↗
+                        </a>
+                    </div>
+
+                    <!-- Visor interactivo embebido -->
+                    <div class="relative w-full overflow-hidden rounded-xl border border-gray-300 shadow-md bg-black" style="padding-top: 56.25%;">
+                        <iframe 
+                            src="https://docs.google.com/presentation/d/e/2PACX-1vSixzJ4C09GjC8qCckKR_UIeki0h_N-ss4o-C64XIabLLk7rO3hAj_18_W5YLQt_F-ZpSOUXqX88xtW/pubembed?start=false&loop=false&delayms=3000" 
+                            class="absolute top-0 left-0 w-full h-full border-0" 
+                            allowfullscreen="true" 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true">
+                        </iframe>
+                    </div>
+                </section>
+
+                <!-- Bloque 1: El Vibe Coding en el marco del Proyecto ABP -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">1. ¿Qué es el Vibe Coding y cómo se inserta en el Trabajo Final?</h3>
+                    <p>
+                        El término <strong>Vibe Coding</strong> describe una nueva metodología de creación informática: consiste en dialogar con modelos de Inteligencia Artificial generativa mediante lenguaje natural estructurado para describir qué recurso interactivo necesitamos, qué mediación didáctica debe realizar y qué lógica matemática debe sostener.
+                    </p>
+                    <p>
+                        En la formación docente en matemática, el Vibe Coding no reemplaza al profesor; por el contrario, jerarquiza su saber profesional:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>
+                            <strong>El/la docente como Director/a Pedagógico/a:</strong> define el contenido curricular, el obstáculo epistemológico o cognitivo que busca destrabar, el tipo de andamiaje, las preguntas socráticas y los apoyos del Diseño Universal para el Aprendizaje (DUA).
+                        </li>
+                        <li>
+                            <strong>La Inteligencia Artificial como Motor Técnico:</strong> traduce esa intencionalidad pedagógica en código limpio, generando un archivo web único (<span class="code-pill">.html</span>) ejecutable en cualquier navegador o celular sin necesidad de instalar programas ni servidores.
+                        </li>
+                    </ul>
+
+                    <div class="scale-box">
+                        <h4 class="font-bold text-emerald-950 text-base mb-1">📍 Inserción en la secuencia didáctica del Proyecto Individual:</h4>
+                        <p class="text-sm text-emerald-900">
+                            La mini-aplicación de Vibe Coding se ubica formalmente en la <strong>Fase 2 (Indagación, Creación y Modelización)</strong> de su proyecto. Su propósito no es sustituir a GeoGebra ni a la explicación docente, sino ofrecer un entorno dinámico interactivo donde las y los estudiantes de secundaria puedan manipular variables, conjeturar, recibir retroalimentación formativa inmediata y construir sentido sobre el contenido matemático.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 2: Criterios didácticos, DUA y la técnica SVG -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">2. Pilares indispensables: Mediación DUA y gráficos SVG integrados</h3>
+                    <p>
+                        Para cumplir satisfactoriamente con la <strong>Rúbrica de Evaluación Analítica</strong> (Criterio 1: <em>Fundamentación pedagógica y uso situado de la tecnología</em>), su aplicación debe respetar dos estándares didácticos centrales:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="criteria-card">
+                            <h4 class="font-bold text-gray-900 text-base mb-2">♿ A. Enfoque DUA (Diseño Universal para el Aprendizaje - Res. N° 860/25):</h4>
+                            <ul class="list-disc pl-6 space-y-1 text-sm text-gray-700">
+                                <li><strong>Múltiples formas de representación:</strong> articular representación simbólica (fórmulas), numérica (tablas), gráfica (esquemas) y verbal (audio o explicaciones breves). Contemplar botones de alto contraste y escala tipográfica.</li>
+                                <li><strong>Múltiples formas de acción:</strong> manipular deslizadores, pulsar botones de conjetura, escribir respuestas y copiar reflexiones a la carpeta sin bloqueos mecánicos.</li>
+                                <li><strong>Múltiples formas de implicación (andamiaje adaptativo):</strong> evitar dar la respuesta resuelta de inmediato; brindar pistas socráticas graduadas ante el error que inviten a repensar el procedimiento.</li>
+                            </ul>
+                        </div>
+
+                        <div class="scale-box bg-emerald-50 border-emerald-600">
+                            <h4 class="font-bold text-emerald-950 text-base mb-1">🎨 B. Recursos visuales: Enlaces a imágenes online, íconos y gráficos SVG</h4>
+                            <p class="text-sm text-emerald-900 mb-2">
+                                Para ilustrar y dar identidad a su aplicación interactiva, se recomienda <strong>incorporar el enlace directo a imágenes online estables</strong>, utilizar <strong>íconos vectoriales</strong> (como FontAwesome) o, como opción destacada en matemática, solicitar a la IA la generación de diagramas y figuras en <strong>código SVG integrado</strong>.
+                            </p>
+                            <p class="text-sm text-emerald-900">
+                                <strong>La ventaja del código SVG y los emojis integrados:</strong> al pedirle a la Inteligencia Artificial que dibuje los gráficos matemáticos en SVG dentro del mismo archivo HTML, el recurso queda 100% autónomo, nítido en cualquier resolución y funciona sin depender de la conexión a internet de la escuela.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 3: Los 5 componentes del Prompt Pedagógico -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">3. Guía práctica de prototipado: Los 5 componentes del Prompt Docente</h3>
+                    <p>
+                        Al interactuar con herramientas como <strong>Gemini Canvas</strong>, <strong>Claude Artifacts</strong> o asistentes locales, estructuren su consigna siguiendo estos 5 componentes:
+                    </p>
+
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 text-sm space-y-2 font-mono text-gray-800">
+                        <p class="text-emerald-700 font-bold font-sans text-base mb-2">📋 Estructura recomendada para el prompt de su app:</p>
+                        <p><strong>1. ROL:</strong> "Actuá como desarrollador web experto en didáctica de la matemática para nivel secundario y accesibilidad DUA..."</p>
+                        <p><strong>2. CONTENIDO Y DESTINATARIOS:</strong> "Creá una aplicación web interactiva para estudiantes de [Año de Secundaria] que aborde el contenido de [Tema] y ayude a superar el obstáculo de [Obstáculo de aprendizaje]..."</p>
+                        <p><strong>3. DINÁMICA INTERACTIVA:</strong> "La aplicación debe constar de [pantalla de inicio / simulador dinámico / desafíos progresivos], permitiendo a los alumnos modificar parámetros, experimentar con deslizadores o ingresar hipótesis..."</p>
+                        <p><strong>4. ANDAMIAJE Y PISTAS:</strong> "No des la respuesta de inmediato. Si el estudiante se equivoca, ofrecé hasta 3 niveles de pistas socráticas orientadoras. Incluí modales de retroalimentación formativa..."</p>
+                        <p><strong>5. ACCESIBILIDAD Y CÓDIGO:</strong> "Generá un único archivo HTML autocontenido con Tailwind CSS. Podés incorporar imágenes online, íconos o diagramas en código SVG. Incluí barra de accesibilidad DUA con botones A+/A-, alto contraste y reproducción de audio..."</p>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 4: Tutoriales paso a paso -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">4. Tutoriales paso a paso: ¿Dónde y cómo crear nuestra app con IA?</h3>
+                    <p>
+                        Para dar los primeros pasos desde la idea pedagógica hasta la aplicación interactiva, tienen a disposición tutoriales prácticos guiados paso a paso según la herramienta de Inteligencia Artificial que elijan utilizar:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a href="https://drive.google.com/file/d/12rxt8QQJLFkghNM4F2pA0egtt7hRh0cu/view?usp=drive_link" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="text-3xl mb-2">🚀</div>
+                                <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Tutorial Antigravity</strong>
+                                <p class="text-xs text-emerald-800 mt-1">Guía completa para trabajar con asistentes de desarrollo asistido por IA y flujos de trabajo ágiles.</p>
+                            </div>
+                            <span class="mt-4 text-xs font-bold text-emerald-700 flex items-center gap-1">Ver tutorial en Drive ↗</span>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/15mXssuS7Q44wnTtpUhEjIi9ujzVz0o6_/view?usp=drive_link" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="text-3xl mb-2">💡</div>
+                                <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Tutorial Claude Artifacts</strong>
+                                <p class="text-xs text-emerald-800 mt-1">Excelente precisión lógica y matemática para crear artefactos interactivos con previsualización en vivo.</p>
+                            </div>
+                            <span class="mt-4 text-xs font-bold text-emerald-700 flex items-center gap-1">Ver tutorial en Drive ↗</span>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/19DSEG3ChNwHs_887zn5bC8ql9wa4e-T-/view?usp=drive_link" target="_blank" class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 hover:border-emerald-500 hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="text-3xl mb-2">✨</div>
+                                <strong class="text-emerald-900 block text-base group-hover:text-emerald-700 transition-colors">Tutorial Gemini Canvas</strong>
+                                <p class="text-xs text-emerald-800 mt-1">Ideal para cuentas Google y @bue.edu.ar, con pantalla dividida (Canvas) para editar código y previsualizar en tiempo real.</p>
+                            </div>
+                            <span class="mt-4 text-xs font-bold text-emerald-700 flex items-center gap-1">Ver tutorial en Drive ↗</span>
+                        </a>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Bloque 5: Metas de producción para el Trabajo Final -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">🛠️ Metas de producción para la Clase 21 en su Documento del Proyecto</h3>
+                    <p>
+                        Durante la clase de hoy y a lo largo de la semana, cada estudiante trabajará en su documento personal de Google Drive del Proyecto Individual, completando los siguientes entregables:
+                    </p>
+
+                    <div class="criteria-card space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">✅</span>
+                            <div>
+                                <strong class="text-gray-900 block">1. Archivo HTML funcional del simulador o mini-aplicación:</strong>
+                                <span class="text-sm text-gray-600">Prototipado, testeado en el navegador e insertado mediante enlace público (o código descargado) en la sección correspondiente de la Fase 2 de su proyecto.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">✅</span>
+                            <div>
+                                <strong class="text-gray-900 block">2. Capturas de pantalla del funcionamiento de la app:</strong>
+                                <span class="text-sm text-gray-600">Pegar en el documento de Google Drive al menos 2 o 3 capturas nítidas donde se observe la interacción, una respuesta con retroalimentación y la barra de apoyos DUA.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-6 border-gray-200">
+
+                <!-- Cronograma oficial -->
+                <section class="space-y-4">
+                    <h3 class="text-2xl font-bold text-emerald-800">📅 Cronograma oficial de clases y entregas (2026)</h3>
+                    <p class="text-sm text-gray-600">
+                        Seguimiento del cronograma del proyecto individual hasta la acreditación final:
+                    </p>
+
+                    <div class="overflow-x-auto rounded-lg border border-gray-200">
+                        <table class="text-sm text-left">
+                            <thead class="bg-emerald-800 text-white text-xs uppercase">
+                                <tr>
+                                    <th class="p-3 w-1/4">Clase / fecha</th>
+                                    <th class="p-3 w-1/4">Fase del proyecto</th>
+                                    <th class="p-3 w-1/2">Objetivo de trabajo y meta parcial</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 18 (03/09)<br>
+                                        <span class="cron-badge">Clase 1 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Lanzamiento y líneas de trabajo</td>
+                                    <td class="p-3 text-gray-600">Presentación de la estructura del proyecto individual ABP y explicación de las líneas de acción y ejes temáticos sugeridos.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 19 (10/09)<br>
+                                        <span class="cron-badge">Clase 2 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Pregunta de investigación y contexto</td>
+                                    <td class="p-3 text-gray-600">Formulación de la pregunta de investigación o problema desafiante, selección de destinatarios (año), contexto escolar y delimitación de contenidos curriculares.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 20 (17/09)<br>
+                                        <span class="cron-badge">Clase 3 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Fundamentación, objetivos e inicio de actividades</td>
+                                    <td class="p-3 text-gray-600">Redacción del marco teórico-didáctico (ABP y autores: Anijovich, Furman, Perrenoud, Pochulu), objetivos de aprendizaje y comienzo de la planificación de actividades progresivas.</td>
+                                </tr>
+                                <tr class="bg-emerald-50/60 hover:bg-emerald-50 font-medium">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 21 (24/09)<br>
+                                        <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs font-bold">Clase de hoy</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-950">Taller de Vibe coding</td>
+                                    <td class="p-3 text-emerald-950">Desarrollo del simulador o mini-aplicación web interactiva creada mediante <em>Vibe coding</em> con asistencia de IA para la propuesta docente, con enfoque DUA y gráficos vectoriales SVG integrados.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 22 (01/10)<br>
+                                        <span class="cron-badge">Clase 5 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">GeoGebra y gamificación</td>
+                                    <td class="p-3 text-gray-600">Diseño de la actividad de modelización dinámica en GeoGebra y diseño de la actividad lúdica o gamificada (misión, escape room). Propuesta optativa de código para alumnos.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 23 (08/10)<br>
+                                        <span class="cron-badge">Clase 6 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Libro de GeoGebra y producto final</td>
+                                    <td class="p-3 text-gray-600">Estructuración y ensamblado del libro interactivo en GeoGebra (consignas, applets y enlaces) y definición del producto final y difusión ante audiencia real.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 24 (15/10)<br>
+                                        <span class="cron-badge">Clase 7 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Plan de evaluación y rúbricas</td>
+                                    <td class="p-3 text-gray-600">Diseño del plan de evaluación formativa y sumativa. Elaboración de instrumentos de seguimiento y diseño de dos rúbricas completas (intermedia y final integradora).</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 25 (22/10)<br>
+                                        <span class="cron-badge">Clase 8 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Anexos: resolución de actividades y uso de IA</td>
+                                    <td class="p-3 text-gray-600">Resolución técnico-matemática completa de todas las actividades propuestas en el proyecto, análisis de errores conceptuales y declaración ética de uso de IA.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 26 (29/10)<br>
+                                        <span class="cron-badge">Clase 9 del proyecto</span>
+                                    </td>
+                                    <td class="p-3 font-medium text-gray-800">Taller de coevaluación entre pares</td>
+                                    <td class="p-3 text-gray-600">Revisión cruzada y retroalimentación formativa de borradores completos entre colegas del profesorado. Ajustes finales.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-semibold text-emerald-900">
+                                        Clase 27 (05/11)<br>
+                                        <span class="bg-emerald-800 text-white px-2 py-0.5 rounded text-xs font-bold">Entrega final</span>
+                                    </td>
+                                    <td class="p-3 font-bold text-emerald-800">Entrega final y socialización</td>
+                                    <td class="p-3 text-gray-700 font-medium">Entrega definitiva del documento en Google Drive y libro de GeoGebra publicado. Presentación y socialización de proyectos.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <a href="index.html" class="text-emerald-600 hover:underline mt-8 inline-block">← Volver al inicio</a>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Prof. Silvina Busto - EDI: Matemática y el trabajo por proyectos - ISFDyT N° 24</p>
+        </footer>
+    </div>
+</body>
+</html>
