@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial: Cómo insertar una imagen en HTML</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --secondary: #0d9488;
+      --dark: #0f172a;
+      --gray-800: #1e293b;
+      --gray-600: #475569;
+      --gray-200: #e2e8f0;
+      --gray-100: #f8fafc;
+      --accent: #f59e0b;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #dbeafe;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-200);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .step-number {
+      background: var(--primary);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+    }
+
+    .step-header h2 {
+      font-size: 1.45rem;
+      color: var(--dark);
+    }
+
+    .content-box {
+      background: var(--gray-100);
+      border-radius: 8px;
+      padding: 1.2rem;
+      border-left: 4px solid var(--primary);
+      margin: 1rem 0;
+    }
+
+    .link-tag {
+      word-break: break-all;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.92rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    .link-tag:hover {
+      text-decoration: underline;
+      background: #c7d2fe;
+    }
+
+    .tip-box {
+      background: #fffbeb;
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+      color: #92400e;
+      font-size: 0.95rem;
+    }
+
+    .prompt-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin: 1.2rem 0;
+      color: #14532d;
+      font-size: 0.95rem;
+    }
+
+    .code-container {
+      position: relative;
+      background: #0f172a;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 1.25rem 0;
+    }
+
+    .code-header {
+      background: #1e293b;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+
+    .btn-copy {
+      background: #334155;
+      color: #f8fafc;
+      border: none;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-copy:hover {
+      background: #475569;
+    }
+
+    pre {
+      padding: 1.25rem;
+      color: #f8fafc;
+      overflow-x: auto;
+      font-family: 'Fira Code', Consolas, Monaco, monospace;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .html-tag { color: #f43f5e; }
+    .html-attr { color: #38bdf8; }
+    .html-val { color: #a3e635; }
+
+    /* Explicación de atributos */
+    .table-attrs {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .table-attrs th, .table-attrs td {
+      border: 1px solid var(--gray-200);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .table-attrs th {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* Demostración */
+    .preview-card {
+      border: 2px dashed #93c5fd;
+      background: #f8fafc;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+
+    .preview-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .sample-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border: 1px solid #cbd5e1;
+      display: inline-block;
+    }
+
+    .caption {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      font-style: italic;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .checklist li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div style="margin-bottom: 1.25rem;">
+      <a href="clase21.html" style="color: #047857; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.95rem;">
+        ← Volver a la Clase 21
+      </a>
+    </div>
+    <header>
+      <h1>Cómo Insertar una Imagen en HTML</h1>
+      <p>Guía paso a paso para añadir imágenes a tu página o aplicación web utilizando enlaces de Internet.</p>
+    </header>
+
+    <!-- PASO 1 -->
+    <section class="card">
+      <div class="step-header">
+        <div class="step-number">1</div>
+        <h2>Buscar la imagen en la web</h2>
+      </div>
+      <p>
+        El primer paso es navegar hasta el sitio web donde se encuentra la imagen que deseas utilizar en tu proyecto.
+      </p>
+      <div class="content-box">
+        <strong>Página web de ejemplo:</strong><br>
+        <a href="https://mariainescarvajal.wordpress.com/2011/05/20/un-ejemplo/" target="_blank" rel="noopener noreferrer" class="link-tag">
+          https://mariainescarvajal.wordpress.com/2011/05/20/un-ejemplo/
+        </a>
+      </div>
+      <p>
+        Abre el enlace en una pestaña de tu navegador para ver el contenido donde está alojada la imagen.
+      </p>
+    </section>
+
+    <!-- PASO 2 -->
+    <section class="card">
+      <div class="step-header">
+        <div class="step-number">2</div>
+        <h2>Obtener la dirección directa de la imagen</h2>
+      </div>
+      <p>
+        Para que el código HTML funcione, <strong>no debemos usar la dirección de la página completa</strong>, sino la dirección directa del archivo de imagen:
+      </p>
+      <ol style="margin-left: 1.5rem; margin-top: 0.8rem; margin-bottom: 0.8rem;">
+        <li>Posiciónate con el puntero del mouse justo sobre la imagen elegida.</li>
+        <li>Haz clic con el <strong>botón derecho</strong> del mouse.</li>
+        <li>En el menú desplegable, selecciona la opción <strong>"Copiar dirección de imagen"</strong> (o <em>"Copy image address"</em> en inglés).</li>
+      </ol>
+
+      <div class="content-box">
+        <strong>Enlace directo copiado (URL de la imagen):</strong><br>
+        <code class="link-tag">https://mariainescarvajal.wordpress.com/wp-content/uploads/2011/05/dove.jpg</code>
+      </div>
+
+      <div class="tip-box">
+        <strong>💡 ¿Cómo reconocer que es el link correcto?</strong><br>
+        El enlace directo de una imagen generalmente termina con una extensión de archivo gráfico, por ejemplo: <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.webp</code> o <code>.gif</code>.
+      </div>
+    </section>
+
+    <!-- PASO 3 -->
+    <section class="card">
+      <div class="step-header">
+        <div class="step-number">3</div>
+        <h2>Pedirle a la IA que inserte la imagen que está en ese link</h2>
+      </div>
+      <p>
+        En lugar de escribir código HTML manualmente, mediante <strong>Vibe Coding</strong> simplemente le indicamos a la Inteligencia Artificial (Gemini, Claude, ChatGPT, etc.) que inserte la imagen utilizando el enlace directo que acabamos de copiar.
+      </p>
+
+      <div class="prompt-box">
+        <strong>💬 Ejemplo de prompt para pedirle a la IA:</strong><br>
+        <em>"Por favor, insertá en mi aplicación la imagen que está en este link: <code>https://mariainescarvajal.wordpress.com/wp-content/uploads/2011/05/dove.jpg</code>. Asegurate de incluir una descripción para accesibilidad y que la imagen sea adaptativa (responsive) para que se adapte bien a pantallas de celular y computadora."</em>
+      </div>
+
+      <p>
+        A partir de tu indicación, la IA generará e insertará en el archivo HTML el código con la etiqueta <code>&lt;img&gt;</code> y el atributo <span style="font-family: monospace; font-weight: bold; color: var(--primary);">src="..."</span>, quedando así:
+      </p>
+
+      <div class="code-container">
+        <div class="code-header">
+          <span>HTML</span>
+          <button class="btn-copy" onclick="copiarCodigo()">Copiar código</button>
+        </div>
+        <pre><code id="htmlCode"><span class="html-tag">&lt;img</span> <span class="html-attr">src</span>=<span class="html-val">"https://mariainescarvajal.wordpress.com/wp-content/uploads/2011/05/dove.jpg"</span> 
+     <span class="html-attr">alt</span>=<span class="html-val">"Paloma de la paz - Ejemplo"</span> 
+     <span class="html-attr">style</span>=<span class="html-val">"max-width: 100%; height: auto;"</span><span class="html-tag">&gt;</span></code></pre>
+      </div>
+
+      <h3 style="margin-top: 1.5rem; font-size: 1.15rem;">Partes de la etiqueta &lt;img&gt;:</h3>
+      <table class="table-attrs">
+        <thead>
+          <tr>
+            <th>Atributo</th>
+            <th>Función</th>
+            <th>Ejemplo en este tutorial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>src</code> <em>(source)</em></td>
+            <td>Ruta o dirección URL donde está guardada la imagen.</td>
+            <td><code>"https://.../dove.jpg"</code></td>
+          </tr>
+          <tr>
+            <td><code>alt</code> <em>(alternative text)</em></td>
+            <td>Texto descriptivo que se muestra si la imagen no carga y para personas con discapacidad visual (accesibilidad).</td>
+            <td><code>"Paloma de la paz - Ejemplo"</code></td>
+          </tr>
+          <tr>
+            <td><code>style</code> / dimensiones</td>
+            <td>Permite controlar el ancho y alto para que se adapte bien a pantallas de celular y computadora.</td>
+            <td><code>max-width: 100%; height: auto;</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PASO 4: RESULTADO EN VIVO -->
+    <section class="card">
+      <div class="step-header">
+        <div class="step-number">4</div>
+        <h2>¡Resultado final en vivo!</h2>
+      </div>
+      <p>
+        Así es exactamente como se visualiza la imagen del ejemplo una vez insertada en una página web:
+      </p>
+
+      <div class="preview-card">
+        <h3>Vista previa en tiempo real</h3>
+        <!-- Imagen del ejemplo insertada -->
+        <img src="https://mariainescarvajal.wordpress.com/wp-content/uploads/2011/05/dove.jpg" 
+             alt="Paloma de la paz - Ejemplo insertado con HTML" 
+             class="sample-image"
+             loading="lazy">
+        <p class="caption">Imagen cargada directamente desde: <code>dove.jpg</code></p>
+      </div>
+
+      <h3 style="margin-top: 1.5rem; font-size: 1.15rem;">Resumen de buenas prácticas:</h3>
+      <ul class="checklist">
+        <li>Usa siempre el enlace directo a la imagen (terminado en .jpg, .png, etc.), no la dirección de la página web.</li>
+        <li>Incluye siempre el atributo <code>alt</code> con una breve descripción para accesibilidad.</li>
+        <li>Añade <code>style="max-width: 100%; height: auto;"</code> para que tu imagen sea responsive y no se desborde en celulares.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>💡 <strong>Tutorial realizado por Silvina Busto con asistencia de Antigravity (IA)</strong></p>
+      <p style="font-size: 0.85rem; color: var(--gray-600); margin-top: 0.35rem;">Basado en <em>tutorial insertar imagen en html.txt</em> • Recursos de Desarrollo Web y TIC</p>
+    </footer>
+  </div>
+
+  <script>
+    function copiarCodigo() {
+      const code = `<img src="https://mariainescarvajal.wordpress.com/wp-content/uploads/2011/05/dove.jpg" alt="Paloma de la paz - Ejemplo" style="max-width: 100%; height: auto;">`;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.querySelector('.btn-copy');
+        btn.textContent = '¡Copiado!';
+        btn.style.backgroundColor = '#10b981';
+        setTimeout(() => {
+          btn.textContent = 'Copiar código';
+          btn.style.backgroundColor = '#334155';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
