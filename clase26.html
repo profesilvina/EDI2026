@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI Matemática - Clase 26: Exposición oral de los proyectos terminados y resumen de proyectos - ISFDyT 24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #fbfbfa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: #37352f;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        .content-card {
+            background-color: white;
+            border: 1px solid #e9e9e7;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .status-badge-complete {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .status-badge-incomplete {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.25rem 0.55rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease-in-out;
+        }
+        .link-geogebra {
+            background-color: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+        }
+        .link-geogebra:hover {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        .link-vibe {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+        .link-vibe:hover {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12 lg:p-16">
+    <div class="max-w-7xl mx-auto">
+        <a href="index.html" class="text-emerald-700 hover:text-emerald-900 font-medium hover:underline mb-6 inline-flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> Volver a la portada de EDI 2026
+        </a>
+        
+        <img src="bannerEDI.png" alt="Banner EDI" class="banner">
+
+        <div class="content-card shadow-sm">
+            <div class="text-xs text-emerald-800 font-bold uppercase tracking-wider mb-2">
+                Clase 26 • 12 de noviembre de 2026 • Modalidad presencial (ISFDyT N° 24)
+            </div>
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-emerald-800 mb-6 border-b pb-4">
+                Exposición oral de los proyectos terminados y resumen de proyectos
+            </h1>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+
+                <!-- Presentación de la clase -->
+                <div class="p-5 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-200 text-emerald-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <span class="text-3xl mt-0.5">🎓</span>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-200/80 px-2 py-0.5 rounded">
+                                Jornada de socialización y cierre del trabajo final
+                            </span>
+                            <h2 class="font-bold text-emerald-950 text-lg md:text-xl mt-1">
+                                Exposición oral de los proyectos de Aprendizaje Basado en Proyectos (ABP)
+                            </h2>
+                            <p class="text-sm text-emerald-900 mt-1">
+                                Cada estudiante presenta su proyecto individual, proyecta y demuestra el funcionamiento en vivo de su Libro de GeoGebra y de su aplicación interactiva desarrollada mediante <em>vibe coding</em>.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="repoapps_mate/index.html" target="_blank" class="shrink-0 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-sm transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group"></i> Catálogo de aplicaciones
+                    </a>
+                </div>
+
+                <!-- Pautas para los expositores -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-emerald-900 text-sm mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-clock"></i> Tiempo por exposición
+                        </h3>
+                        <p class="text-xs text-gray-600">
+                            Entre <strong>7 y 10 minutos</strong> por estudiante para presentar la propuesta, seguido de preguntas e intercambio con los compañeros.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-emerald-900 text-sm mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-desktop"></i> Proyección en vivo
+                        </h3>
+                        <p class="text-xs text-gray-600">
+                            Demostración del <strong>Libro de GeoGebra</strong> (construcciones y deslizadores) y de la <strong>app de vibe coding</strong> con diseño accesible (DUA).
+                        </p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-emerald-900 text-sm mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-bullseye"></i> Ejes centrales
+                        </h3>
+                        <p class="text-xs text-gray-600">
+                            Problema de investigación, año destinatario de secundaria, contenidos matemáticos trabajados y producto final elaborado.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TABLA DE RESUMEN DE PROYECTOS -->
+                <section class="space-y-4 pt-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-2">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-2">
+                            <i class="fa-solid fa-table-list text-emerald-600"></i>
+                            Resumen de proyectos
+                        </h2>
+                        <span class="text-xs text-gray-500 font-medium">
+                            11 proyectos registrados
+                        </span>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                        <table class="text-left text-sm text-gray-700 bg-white min-w-full">
+                            <thead class="bg-emerald-800 text-white text-xs uppercase tracking-wider">
+                                <tr>
+                                    <th class="p-3 text-center w-12">N°</th>
+                                    <th class="p-3">Estudiante</th>
+                                    <th class="p-3">Título del proyecto</th>
+                                    <th class="p-3 text-center">Año</th>
+                                    <th class="p-3">Resumen del proyecto</th>
+                                    <th class="p-3 text-center">Libro de GeoGebra</th>
+                                    <th class="p-3 text-center">App de vibe coding</th>
+                                    <th class="p-3 text-center">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">1</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Alicia Beatriz Astigarraga</td>
+                                    <td class="p-3 text-emerald-950 font-medium">El desafío de los envases</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">1.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Construcción y diseño de envases reciclables a partir del análisis de la relación entre volumen y superficie en cilindros y prismas para optimizar material.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/gpztzk4c" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/alicia.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-cube"></i> Simulador 3D</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">2</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Jazmín Carrizo</td>
+                                    <td class="p-3 text-emerald-950 font-medium">Rutas eficientes de reparto</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">4.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Diseño y optimización de recorridos de reparto en la ciudad mediante cálculo de distancias con teorema de Pitágoras, sistemas de coordenadas y funciones lineales de costo para calcular el punto de equilibrio entre bici y moto.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/nsqbfgtq" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://gemini.google.com/share/172fb1a73a78?social_preview=true&skid=705c7d15-50f2-46b6-bb9d-11b535a57600" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-robot"></i> Simulador Gemini</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">3</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Nicolás Gómez</td>
+                                    <td class="p-3 text-emerald-950 font-medium">¿Cuándo colapsa el sistema?</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">5.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Modelización del crecimiento y propagación de un brote epidémico mediante funciones exponenciales y logarítmicas para asesorar al municipio sobre la capacidad sanitaria y toma de decisiones.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/ct8qn5de" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a><a href="https://www.geogebra.org/m/dmzvs97t" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://claude.ai/artifact/1oBZg9MW4Dj8ynWGbHNP4e" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-microchip"></i> Simulador Claude</a><a href="https://create.kahoot.it/details/171f2e67-ade3-4c4b-8e24-7da8ed7deeec" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-gamepad"></i> Kahoot</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">4</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Vanina Julia Malatesta</td>
+                                    <td class="p-3 text-emerald-950 font-medium">Estudio InfinitA: tras las huellas de la obra perdida</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">4.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Reconstrucción de una obra artística extraviada mediante el descifrado de acertijos sobre transformaciones en el plano, razones y proporción áurea en una propuesta gamificada.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/yjwhkavh" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a><a href="https://www.geogebra.org/classic/vqcvtcch" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a><a href="https://www.geogebra.org/classic/udhvqnnw" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/vanina.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-palette"></i> Estudio InfinitA</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">5</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Cintia Marcaccio</td>
+                                    <td class="p-3 text-emerald-950 font-medium">¿Alcanza para todos? Fracciones en la merienda escolar</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">1.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Planificación, reparto equitativo y cálculo de porciones y costos para organizar una merienda comunitaria aplicando fracciones equivalentes, orden y proporcionalidad directa.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/kgqyqnda" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a><a href="https://www.geogebra.org/m/xtnmakme" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/cintia.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-mug-hot"></i> La merienda cambia</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">6</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Verónica Oliva</td>
+                                    <td class="p-3 text-emerald-950 font-medium">El gallinero matemático</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">2.° / 3.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Optimización del espacio para la construcción de un gallinero en el patio escolar analizando relaciones entre perímetro constante y área máxima en figuras geométricas.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/veronica.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-wheat-awn"></i> El gallinero DUA</a><a href="https://ai.studio/apps/4f4e79dc-eb90-4476-b978-cd4a5a5fb776?fullscreenApplet=true&alumno=1&curso=1%C2%BA+A%C3%B1o+Secundaria&modo=individual&min=5" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir app</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">7</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Fabricio Rebolledo</td>
+                                    <td class="p-3 text-emerald-950 font-medium">El tiro perfecto: cuando la matemática entra a la cancha</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">3.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Modelización de la trayectoria parabólica en tiros de básquetbol mediante funciones cuadráticas, experimentación con el simulador web interactivo y formulación del modelo del tiro perfecto para una muestra escolar.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/jupjzkwq" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/fabricio.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-basketball"></i> Tiro perfecto PRO</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">8</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Iris Toloza</td>
+                                    <td class="p-3 text-emerald-950 font-medium">Construyendo la civilización: el código cartográfico de Minecraft</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">1.° / 2.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Planificación espacial y diseño de un mapa cartográfico en cuadrícula aplicando coordenadas cartesianas, escalas y cálculo de áreas poligonales.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-incomplete"><i class="fa-solid fa-clock"></i> Incompleto</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">9</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Karen Salinas</td>
+                                    <td class="p-3 text-emerald-950 font-medium">Misión energía: código verde</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">3.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Relevamiento del consumo de artefactos eléctricos y diseño de una campaña escolar de uso eficiente mediante modelización con funciones lineales e interpretación de unidades en kWh.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/classroom/zmek6abx" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://view.genially.com/6abc5bf9280079caf04cbf4e" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-gamepad"></i> Escape Genially</a><a href="https://profesilvina.github.io/repomate/karen.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-bolt"></i> Simulador energía</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">10</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Ángel Viegas</td>
+                                    <td class="p-3 text-emerald-950 font-medium">La geometría de las colmenas y el espacio</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">2.° año de secundaria agraria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Mapeo poligonal de bancales de la huerta, teselaciones hexagonales, conjetura del panal y optimización de sistemas de riego por goteo sustentable.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/bb8jkzjm" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="file:///C:/Users/User/Documents/MiWebDocente/EDI2026/repoapps_mate/viegas.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-puzzle-piece"></i> Pioneras geometría</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50/40 transition-colors">
+                                    <td class="p-3 text-center font-bold text-gray-500">11</td>
+                                    <td class="p-3 font-semibold text-gray-900 whitespace-nowrap">Marisa Sierra</td>
+                                    <td class="p-3 text-emerald-950 font-medium">¿A dónde se va mi batería? (Misión Batería + Campaña de afiches y flyers)</td>
+                                    <td class="p-3 text-center text-xs font-semibold text-gray-600 whitespace-nowrap">2.° año de secundaria</td>
+                                    <td class="p-3 text-xs leading-relaxed text-gray-700 min-w-[280px]">Investigación estadística sobre el consumo de batería en teléfonos móviles según las aplicaciones utilizadas, calculando porcentajes, promedios, mediana y rango para diseñar una campaña escolar de concientización y uso responsable mediante afiches y flyers.</td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://www.geogebra.org/m/vdcuvqzw" target="_blank" rel="noopener noreferrer" class="link-btn link-geogebra"><i class="fa-solid fa-shapes"></i> Ver libro</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><div class="flex flex-col gap-1 items-center"><a href="https://profesilvina.github.io/repomate/marisa.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-battery-half"></i> Juego y simulador</a><a href="https://profesilvina.github.io/repomate/marisa_afiche.html" target="_blank" rel="noopener noreferrer" class="link-btn link-vibe"><i class="fa-solid fa-bullhorn"></i> Creador flyers</a></div></td>
+                                    <td class="p-3 text-center whitespace-nowrap"><span class="status-badge-complete"><i class="fa-solid fa-circle-check"></i> Completo</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-xs text-gray-500">
+            ISFDyT N° 24 (Bernal) • Profesorado de Educación Secundaria en Matemática • EDI: Matemática y el trabajo por proyectos (4.° Año B) • Prof. Silvina Elena Busto
+        </div>
+    </div>
+</body>
+</html>
